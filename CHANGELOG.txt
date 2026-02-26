@@ -41,43 +41,24 @@ Previously merged (34 subjects):
 
 participants.tsv updated (34 subjects).
 
-## 2026-02-26 — Merge job branches into master
+## 2026-02-26 — Remove 7 subjects with lost annex content
 
-Previously merged (34 subjects):
-  - sub-v1s0x0050642
-  - sub-v1s0x0050646
-  - sub-v1s0x0050647
-  - sub-v1s0x0050649
-  - sub-v1s0x0050653
-  - sub-v1s0x0050654
-  - sub-v1s0x0050656
-  - sub-v1s0x0050659
-  - sub-v1s0x0050660
-  - sub-v1s0x0050663
-  - sub-v1s0x0050664
-  - sub-v1s0x0050665
-  - sub-v1s0x0050666
-  - sub-v1s0x0050668
-  - sub-v1s1x0050643
-  - sub-v1s2x0051456
-  - sub-v1s10x0050952
-  - sub-v1s10x0050953
-  - sub-v1s10x0050954
-  - sub-v1s10x0050955
-  - sub-v1s10x0050956
-  - sub-v1s10x0050957
-  - sub-v1s10x0050958
-  - sub-v1s10x0050959
-  - sub-v1s10x0050960
-  - sub-v1s10x0050961
-  - sub-v1s10x0050962
-  - sub-v1s10x0050964
-  - sub-v1s10x0050965
-  - sub-v1s10x0050966
-  - sub-v1s13x0050002
-  - sub-v1s16x0051160
-  - sub-v2s0x29006
-  - sub-v2s2x29057
+First-batch SLURM jobs (job 4170, tasks 1–7) completed fMRIPrep successfully
+but failed to push results to permanent storage (RIA store / GIN). The only
+copies of annexed content resided on ephemeral SLURM scratch directories that
+have since been wiped. These 7 subjects must be re-run.
 
-participants.tsv updated (34 subjects).
+Removed subjects:
+  - sub-v1s1x0050643   (ABIDE I, CMU_b)
+  - sub-v1s2x0051456   (ABIDE I, Caltech)
+  - sub-v1s10x0050952  (ABIDE I, NYU)
+  - sub-v1s13x0050002  (ABIDE I, Pitt)
+  - sub-v1s16x0051160  (ABIDE I, Stanford)
+  - sub-v2s0x29006     (ABIDE II, BNI_1)
+  - sub-v2s2x29057     (ABIDE II, ETHZ_1)
 
+Actions taken:
+  - Marked 7 ephemeral scratch clone UUIDs as dead (git annex dead)
+  - Removed subject derivative directories, HTML reports, and FreeSurfer sourcedata
+  - Removed subjects from participants.tsv
+  - participants.tsv updated (27 subjects)
