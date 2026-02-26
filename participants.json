@@ -5,5 +5,11 @@
   "stc_ref_time": {
     "Description": "Reference time used for slice-timing correction",
     "Units": "s"
+  },
+  "fmriprep_start": {
+    "Description": "Date and time when fMRIPrep began processing this participant (ISO 8601, local time on the HPC cluster)"
+  },
+  "fmriprep_stop": {
+    "Description": "Date and time when fMRIPrep finished processing this participant (ISO 8601, local time on the HPC cluster)"
   }
 }
