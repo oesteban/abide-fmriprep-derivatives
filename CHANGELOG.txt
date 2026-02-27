@@ -62,6 +62,31 @@ Actions taken:
   - Removed subject derivative directories, HTML reports, and FreeSurfer sourcedata
   - Removed subjects from participants.tsv
   - participants.tsv updated (27 subjects)
+
+## 2026-02-27 — Salvage annex content for 7 first-batch subjects
+
+Scratch directories from jobs 4170–4176 (tasks 1–7) were still present on
+compute nodes despite earlier assumption that they had been wiped. Annex
+objects (1,303 files, ~9 GB total) were recovered via rsync to the RIA store.
+
+Recovered subjects:
+  - sub-v1s1x0050643   (calypso4, job 4171_1)
+  - sub-v1s2x0051456   (calypso1, job 4172_2)
+  - sub-v1s10x0050952  (calypso2, job 4173_3)
+  - sub-v1s13x0050002  (calypso3, job 4174_4)
+  - sub-v1s16x0051160  (calypso5, job 4175_5)
+  - sub-v2s0x29006     (calypso6, job 4176_6)
+  - sub-v2s2x29057     (calypso7, job 4170_7)
+
+Actions taken:
+  - Copied annex objects from each node's scratch to RIA store via srun + rsync
+  - Restored subject directories, HTML reports, and FreeSurfer sourcedata to git
+  - Re-added subjects to participants.tsv
+  - participants.tsv updated (38 subjects)
+
+Note: git-annex location tracking still needs updating (fsck from Calypso)
+to register the RIA store as a content source for these objects.
+
 ## 2026-02-27 — Merge job branches into master
 
 Previously merged (34 subjects):
