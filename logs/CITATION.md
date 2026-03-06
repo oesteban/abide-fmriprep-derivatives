@@ -32,7 +32,7 @@ and accessed with *TemplateFlow* [25.0.4, @templateflow]:
 
 Functional data preprocessing
 
-: For each of the 1 BOLD runs found per subject (across all
+: For each of the 3 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume was generated,
 using a custom methodology of *fMRIPrep*, for use in head motion correction.
@@ -43,8 +43,8 @@ parameters) are estimated before any spatiotemporal filtering using
 The BOLD reference was then co-registered to the T1w reference using
 `bbregister` (FreeSurfer) which implements boundary-based registration [@bbr].
 Co-registration was configured with six degrees of freedom.
-BOLD runs were slice-time corrected to 0.97s (0.5 of slice acquisition range
-0s-1.94s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
+BOLD runs were slice-time corrected to 1.22s (0.5 of slice acquisition range
+0s-2.43s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
 Several confounding time-series were calculated based on the
 *preprocessed BOLD*: framewise displacement (FD), DVARS and
 three region-wise global signals.
