@@ -90,7 +90,7 @@ Generation Asymmetric Average Brain Stereotaxic Registration Model}
 {[}\citet{mni152nlin6asym}, RRID:SCR\_002823; TemplateFlow ID:
 MNI152NLin6Asym{]}.
 \item[Functional data preprocessing]
-For each of the 1 BOLD runs found per subject (across all tasks and
+For each of the 3 BOLD runs found per subject (across all tasks and
 sessions), the following preprocessing was performed. First, a reference
 volume was generated, using a custom methodology of \emph{fMRIPrep}, for
 use in head motion correction. Head-motion parameters with respect to
@@ -101,7 +101,7 @@ spatiotemporal filtering using \texttt{mcflirt} \citep[FSL
 reference using \texttt{bbregister} (FreeSurfer) which implements
 boundary-based registration \citep{bbr}. Co-registration was configured
 with six degrees of freedom. BOLD runs were slice-time corrected to
-0.97s (0.5 of slice acquisition range 0s-1.94s) using \texttt{3dTshift}
+1.22s (0.5 of slice acquisition range 0s-2.43s) using \texttt{3dTshift}
 from AFNI \citep[RRID:SCR\_005927]{afni}. Several confounding
 time-series were calculated based on the \emph{preprocessed BOLD}:
 framewise displacement (FD), DVARS and three region-wise global signals.
