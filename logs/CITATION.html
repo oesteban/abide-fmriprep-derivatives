@@ -251,8 +251,8 @@ reference using <code>bbregister</code> (FreeSurfer) which implements
 boundary-based registration <span class="citation"
 data-cites="bbr">(Greve and Fischl 2009)</span>. Co-registration was
 configured with six degrees of freedom. BOLD runs were slice-time
-corrected to the mid-timepoint of each run's slice acquisition range
-using <code>3dTshift</code> from AFNI <span class="citation"
+corrected to 0.97s (0.5 of slice acquisition range 0s-1.94s) using
+<code>3dTshift</code> from AFNI <span class="citation"
 data-cites="afni">(Cox and Hyde 1997, RRID:SCR_005927)</span>. Several
 confounding time-series were calculated based on the <em>preprocessed
 BOLD</em>: framewise displacement (FD), DVARS and three region-wise
