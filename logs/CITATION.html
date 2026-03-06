@@ -238,7 +238,7 @@ RRID:SCR_002823; TemplateFlow ID: MNI152NLin6Asym].</p>
 </dd>
 <dt>Functional data preprocessing</dt>
 <dd>
-<p>For each of the 1 BOLD runs found per subject (across all tasks and
+<p>For each of the 3 BOLD runs found per subject (across all tasks and
 sessions), the following preprocessing was performed. First, a reference
 volume was generated, using a custom methodology of <em>fMRIPrep</em>,
 for use in head motion correction. Head-motion parameters with respect
@@ -251,7 +251,7 @@ reference using <code>bbregister</code> (FreeSurfer) which implements
 boundary-based registration <span class="citation"
 data-cites="bbr">(Greve and Fischl 2009)</span>. Co-registration was
 configured with six degrees of freedom. BOLD runs were slice-time
-corrected to 0.97s (0.5 of slice acquisition range 0s-1.94s) using
+corrected to 1.22s (0.5 of slice acquisition range 0s-2.43s) using
 <code>3dTshift</code> from AFNI <span class="citation"
 data-cites="afni">(Cox and Hyde 1997, RRID:SCR_005927)</span>. Several
 confounding time-series were calculated based on the <em>preprocessed
