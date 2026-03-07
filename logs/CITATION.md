@@ -43,8 +43,8 @@ parameters) are estimated before any spatiotemporal filtering using
 The BOLD reference was then co-registered to the T1w reference using
 `bbregister` (FreeSurfer) which implements boundary-based registration [@bbr].
 Co-registration was configured with six degrees of freedom.
-BOLD runs were slice-time corrected to 0.97s (0.5 of slice acquisition range
-0s-1.94s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
+BOLD runs were slice-time corrected to 0.975s (0.5 of slice acquisition range
+0s-1.95s) using `3dTshift` from AFNI  [@afni, RRID:SCR_005927].
 Several confounding time-series were calculated based on the
 *preprocessed BOLD*: framewise displacement (FD), DVARS and
 three region-wise global signals.
