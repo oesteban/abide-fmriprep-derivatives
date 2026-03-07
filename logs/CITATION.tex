@@ -100,16 +100,14 @@ spatiotemporal filtering using \texttt{mcflirt} \citep[FSL
 ,][]{mcflirt}. The BOLD reference was then co-registered to the T1w
 reference using \texttt{bbregister} (FreeSurfer) which implements
 boundary-based registration \citep{bbr}. Co-registration was configured
-with six degrees of freedom. BOLD runs were slice-time corrected to
-0.97s (0.5 of slice acquisition range 0s-1.94s) using \texttt{3dTshift}
-from AFNI \citep[RRID:SCR\_005927]{afni}. Several confounding
-time-series were calculated based on the \emph{preprocessed BOLD}:
-framewise displacement (FD), DVARS and three region-wise global signals.
-FD was computed using two formulations following Power (absolute sum of
-relative motions, \citet{power_fd_dvars}) and Jenkinson (relative root
-mean square displacement between affines, \citet{mcflirt}). FD and DVARS
-are calculated for each functional run, both using their implementations
-in \emph{Nipype} \citep[following the definitions by][]{power_fd_dvars}.
+with six degrees of freedom. Several confounding time-series were
+calculated based on the \emph{preprocessed BOLD}: framewise displacement
+(FD), DVARS and three region-wise global signals. FD was computed using
+two formulations following Power (absolute sum of relative motions,
+\citet{power_fd_dvars}) and Jenkinson (relative root mean square
+displacement between affines, \citet{mcflirt}). FD and DVARS are
+calculated for each functional run, both using their implementations in
+\emph{Nipype} \citep[following the definitions by][]{power_fd_dvars}.
 The three global signals are extracted within the CSF, the WM, and the
 whole-brain masks. Additionally, a set of physiological regressors were
 extracted to allow for component-based noise correction
